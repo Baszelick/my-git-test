@@ -1,0 +1,16 @@
+<ul>
+  <app-task
+    *ngFor="let task of tasks"
+    [task]="task"
+    (delete)="deleteTask($event)"
+    (toggle)="toggleTask($event)"
+  ></app-task>
+</ul>
+<form (ngSubmit)="addNewTask()"><input
+  type="text"
+  [(ngModel)]="newTaskText"
+  name="taskInput"
+  placeholder="Введите Задачу"
+>
+  <button type="submit">Добавить</button>
+</form>
