@@ -1,0 +1,17 @@
+<li [class.completed]="task.completed">
+  <input
+  type="checkbox"
+  class="complete-checkbox"
+  [checked]="task.completed"
+  (change)="onToggle()"
+  >
+
+  <span>{{ task.text }}</span>
+
+  <button
+  class="delete-btn"
+  (click)="onDelete()"
+  >Удалить
+  </button>
+
+</li>
